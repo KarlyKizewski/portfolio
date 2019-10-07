@@ -1,0 +1,239 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="prism-atom-dark.css"
+    type="text/css"
+    media="screen"
+  />
+
+  <script type="text/javascript" src="prism.js"></script>
+  <script type="text/javascript" src="prism.ruby.js"></script>
+
+    <title>Karly Kizewski</title>
+    <meta name="description" content="Karly Kizewski is a student of The George Washington University Coding Boot Camp, gaining experience with Ruby, Rails and JavaScript for full-stack web development."> 
+
+  </head>
+
+
+  <body>
+    <div class="about-container">
+      <div class="navigation">
+      <ul>
+        <li><a href="#myself" class="nav-link">ABOUT</a></li>
+        <li><a href="#code-samples" class="nav-link">CODE SAMPLES</a></li>
+        <li><a href="#web-apps" class="nav-link">WEB APPS</a></li>
+        <li><a href="#skills-tools" class="nav-link">SKILLS &amp; TOOLS</a></li>
+        <li class="hire-me"><a href="#hire-me" class="nav-link">CONTACT</a></li>
+        <li><a href="https://sincerely-karly.netlify.com/" class="nav-link">PERSONAL</a></li>
+      </ul>
+      </div>
+      <div class="about">
+          <a href="https://github.com/KarlyKizewski">
+          <img src="me.jpg" class="me" /></a>
+
+          <h1 id="myself">Karly Kizewski</h1>
+
+          <h2>PERPETUAL LEARNER & CREATOR</h2>
+          <hr class="white"/>
+          <p class="bio">
+            Karly Kizewski is a tattooed tea aficionado with a degree in Art History from UVa. Always adorned with her trusty calculator Casio, she strives for time management, efficiency and organization - beautiful organization. Karly believes in lifelong learning and growth. As a coding student, she aims to develop the skillset for full-stack web development whilst integrating her passion for simple, thoughtful design. Chado, the way of tea, is her book of principles. 
+          </p>
+
+      </div>
+    </div>
+
+    <h3 id="code-samples">Code Snippets</h3>
+    <hr class="yellow">
+
+    <div class="box">
+      <h4 class="t">Temperature Conversion</h4>
+      <p class="temp">
+        This Ruby program will prompt the user for a temperature in degrees Celsius and let the user know what the corresponding temperature is in Fahrenheit.
+      </p>
+    </div>
+
+    <div class="box">
+<pre><code class="language-ruby">def american_degree_conversion(t)
+  return (t.to_f - 32) * 5/9
+end
+
+puts &quot;Enter Fahrenheight temperature to convert to Celsius:&quot;
+  temperature = gets.chomp 
+
+val = american_degree_conversion(temperature)
+
+puts &quot;#{temperature}F is #{val.to_s}C&quot; 
+</code></pre>
+    </div>
+
+    <br class="clear" />
+
+    <div class="box">
+<pre><code class="language-ruby">def ordinal(n)
+  suffix = case n % 100
+    when 11, 12, 13 then 'th'
+      else 
+        case n % 10
+        when 1 then 'st'
+        when 2 then 'nd'
+        when 3 then 'rd'
+          else 'th'
+          end
+    end
+end
+
+puts &quot;Enter your numb=r&quot;
+number = gets.chomp.to_i
+     
+puts &quot;That's #{number}#{ordinal(number)}&quot;</code></pre>
+    </div>
+
+    <div class="box">
+      <h4 class="o">Ordinal Challenge</h4>
+      <p class="ordinal">
+        This Ruby program will convert a plain number to the ordinal of the number. So for example, if the user enters 2, it will display 2nd, if the user enters 3, it will display 3rd, etc.
+      </p>
+    </div>
+
+    <br class="clear" />
+
+    <div class="box">
+      <h4 class="t">Foobar</h4>
+      <p class="temp">
+        This Ruby program is an adaptation of a classic technical interview problem which displays sequences of the Foobar pattern.
+      </p>
+    </div>
+
+    <div class="box">
+<pre><code class="language-ruby">puts &quot;How many items do you want to see?&quot;
+  items = gets.chomp.to_i
+
+list = []
+  (1..items).each do |n|
+    if n % 3 == 0 &amp;&amp; n % 5 == 0
+      list.push(&quot;foobar&quot;)
+    elsif n % 3 == 0
+      list.push(&quot;foo&quot;)
+    elsif n % 5 == 0
+      list.push(&quot;bar&quot;)
+    else
+      list.push(n)
+    end
+end
+
+puts list</code></pre>
+    </div>
+
+    <br class="clear" />
+
+
+  <h3 id="web-apps">Web Apps</h3>
+  <hr class="yellow" />
+
+  <div class="box">
+    <h4 class="t">Quote Generator</h4>
+    <a href="https://dirt-patties.herokuapp.com/">
+    <img src="app-screenshots\splurty.png" class="full-width" /></a>
+
+    <p class="temp">
+      A database-powered quote generator with a mobile-first design, using the Ruby on Rails framework, HTML, and CSS. Uses Git and GitHub for version control, and launched on Heroku.
+    </p>
+  </div>
+
+
+  <div class="box">
+      <h4 class="o">Yelp Clone</h4>
+      <a href="https://nomster-karly.herokuapp.com/">
+      <img src="app-screenshots\nomster.png" class="full-width" /></a>
+      <p class="ordinal">
+        A Yelp clone that integrates with the Google Maps API
+        and includes features like user comments, star ratings,
+        image uploading, and user authentication.
+      </p>
+    </div>
+    <br class="clear" />
+
+    <div class="box">
+      <h4 class="t">Two-Sided Market Place</h4>
+      <a href="http://eyes-and-ears.herokuapp.com/">
+      <img src="app-screenshots\flixter.png" class="full-width" /></a>
+      <p class="temp">
+        A two-sided, video-streaming marketplace platform that
+        features credit card payment capabilities, user role
+        management, complex user interfaces, and advanced
+        database relationships.
+      </p>
+    </div>
+    <div class="box">
+      <h4 class="o">Test Driven Development</h4>
+      <a href="https://fleetingmoment.herokuapp.com/">
+      <img src="app-screenshots\grammable.png" class="full-width" /></a>
+      <p class="ordinal">
+        An Instagram clone that was built using industry-standard, test-driven
+        development following numerous red/green/refactor cycles.
+      </p>
+    </div>
+    <br class="clear" />
+    <div class="box">
+      <h4 class="t">Single Page Todo Application</h4>
+      <a href="https://checksandboxes.herokuapp.com/">
+      <img src="app-screenshots\todoster.png" class="full-width" /></a>
+      <p class="temp">
+        This single-page to-do application features a
+        fluid user interface that– by using JavaScript–
+        allows users to rapidly add dynamic content.
+      </p>
+    </div>
+    <div class="box">
+      <h4 class="o">Agile Team Project</h4>
+      <img src="app-screenshots\chess.png" class="full-width" />
+      <p class="ordinal">
+        Worked on an Agile software development team building
+        a chess application. Under the guidance of a senior software engineer,
+        we had weekly Agile team meetings for code reviews, sprint planning,
+        and feature assignments.
+      </p>
+    </div>
+    <br class="clear" />
+    <h3 id="skills-tools">Skills &amp; Tools</h3>
+    <hr class="yellow" />
+    <p class="closing">
+      Karly has developed a proficiency and expertise in the followling programming languages and comfort with the following tools.
+    </p>
+
+    <div class="icons">
+        <img src="skills-and-tools\github.png" class="icon" />
+        <img src="skills-and-tools\rubocop.png" class="icon" />
+        <img src="skills-and-tools\trello.png" class="icon" />
+        <img src="skills-and-tools\slack.png" class="icon" />
+        <img src="skills-and-tools\codeship.png" class="icon" />
+
+        <br class="clear" />
+        <img src="skills-and-tools\skills.png" class="icon" />
+    </div>
+
+    <div class="contact-me" id="hire-me">
+      <h3 class="contact-headline">Contact</h3>
+      <hr class="yellow" />
+      <p class="info">
+        In search of opportunity.
+      <br />
+        Please get in touch via email:
+      </p>
+
+      <p class="email">
+        <a href="mailto:kizewski.karly@gmail.com" class="contact-link">
+          kizewski.karly@gmail.com
+        </a>
+      </p>
+    </div>
+
+  </body>
+
+</html>
+
